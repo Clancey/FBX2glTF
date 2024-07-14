@@ -392,7 +392,7 @@ int main(int argc, char* argv[]) {
   raw.Condense(gltfOptions.maxSkinningWeights, gltfOptions.normalizeSkinningWeights);
   raw.TransformGeometry(gltfOptions.computeNormals);
 
-  boost::nowide::ofstream outStream; // note: auto-flushes in destructor
+  std::ostream* outStream; // note: auto-flushes in destructor
 
   if (useStdout) {
     // Redirect outStream to string stream, to dump out later

@@ -77,7 +77,7 @@ static const std::vector<TriangleIndex> getIndexArray(const RawModel& raw) {
 }
 
 ModelData* Raw2Gltf(
-    boost::nowide::ofstream& gltfOutStream,
+    std::ostream* gltfOutStream,
     const std::string& outputFolder,
     const RawModel& raw,
     const GltfOptions& options) {
